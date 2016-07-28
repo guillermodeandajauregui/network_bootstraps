@@ -12,8 +12,6 @@ import pandas as pd
 #top k, top 100k, top million
 #when single component is found, go through that interval until percolation
 #maybe try the "cleaning less than 20 sized islands thing before 
-
-os.chdir("/mnt/c/gdj/ANALISIS_REDES_SUBTIPOS_BOOTSTRAP")
 #read a graph
 panda_test = pd.read_table("test_case.sif",
                            header =None,)
@@ -32,3 +30,13 @@ panda_parse = nx.parse_edgelist(panda_reformat,
 G = panda_parse
 #
 G.edges(data = True)[9999]
+
+#MI p-value relationship
+N = ""
+
+def pvalue(mi, N):
+    alfa = 1.062
+    beta = -48.7
+    gamma = -0.634
+    #MI = (alfa - logP) / (-beta + (-gamma * n))
+    return(mi)
