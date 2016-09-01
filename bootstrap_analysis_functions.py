@@ -7,7 +7,8 @@ Created on Fri Jul 29 11:30:36 2016
 
 def graphfromsif(sif):
     s = pd.read_table(sif,
-                      header =None)
+                      header =None,
+                      delim_whitespace=True)
     s = s[[0,2,1]]
     s = s.values.tolist()
     def formatfunction(lista):
